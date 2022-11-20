@@ -2,8 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@property --row {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
+
 :root {
   --color: white;
+  --index: 0;
+  --columns: 3;
 }
 
 html, body, #app {
@@ -23,4 +31,7 @@ body {
   height: 2rem;
   background-color: var(--color);
   position: absolute;
+  --row: calc((var(--index) - 1) / var(--columns) - .5);
+  top: calc(var(--row) * 2rem);
+  left: calc((var(--index) - 1 - var(--row) * var(--columns))  * 2rem);
 }

@@ -13,7 +13,9 @@ export default {
 </script>
 
 <template lang="pug">
-.mgaic-cube
+.mgaic-cube(
+  :style="{'--rows': rows, '--columns': columns}"
+)
   template(v-for="(color, colorIndex) in colors")
     template(v-for="item in rows * columns" :key="color + item")
       .face(
