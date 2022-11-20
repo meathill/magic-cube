@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color: white;
+}
+
+html, body, #app {
+  height: 100%;
+}
+
+body {
+  background-color: #aaa;
+}
+
+.magic-cube {
+  position: relative;
+}
+
+.face {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--color);
+  position: absolute;
+}
